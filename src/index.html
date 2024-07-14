@@ -7,6 +7,16 @@
     <title>Vanilla App Template</title>
   </head>
   <body>
+    <form class="form" name="search-form">
+      <label for="user-input-id"></label>
+      <input
+        type="text"
+        name="user-input"
+        id="user-input-id"
+        placeholder="Search images..."
+      />
+      <button class="button" type="submit">Search</button>
+    </form>
     <script type="module" src="./main.js"></script>
     <script type="module" src="./js/pixabay-api.js"></script>
     <script type="module" src="./js/render-functions.js"></script>
