@@ -1,3 +1,5 @@
+import { fetchImageName } from './js/pixabay-api';
+
 const form = document.querySelector('form');
 
 form.addEventListener('submit', handleSubmit);
@@ -9,5 +11,8 @@ function handleSubmit(event) {
   if (inputValue === '') {
     window.alert('Please fill in the form');
   }
+
+  fetchImageName(inputValue);
+
   form.reset();
 }
