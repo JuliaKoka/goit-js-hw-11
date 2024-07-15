@@ -1,9 +1,7 @@
-export const gallery = document.querySelector('.gallery');
+export const gallery = document.querySelector('.gallery-list');
 
-// gallery.addEventListener(
-//   'click',
-//   handleClick(evt => {})
-// );
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 export function createMarkup({
   webformatURL,
@@ -14,10 +12,11 @@ export function createMarkup({
   comments,
   downloads,
 }) {
+  const formattedTags = tags.split(', ').join(', ');
   return `<li class="gallery-item">
-  <div class="img-container">
+  <div class="gallery">
   <a class="gallery-link" href=${largeImageURL}>
-  <img class="gallery-image" src=${webformatURL} data-source=${largeImageURL} alt=${tags}>
+  <img class="gallery-image" src=${webformatURL} data-source=${largeImageURL} alt=${formattedTags}>
   </a>
   </div>
   <div class="img-data">
